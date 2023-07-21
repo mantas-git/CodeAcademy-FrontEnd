@@ -1,0 +1,46 @@
+<form>
+    <h1>
+        <p><b>Payment form</b></p>
+    </h1>
+    <p>Required fields are followed by *</p>
+    <h2><b>Contact information</b></h2>
+    <ul style="list-style-type: none">
+        <p>
+            <label for="fname">Name:*</label>
+            <input name="name" type="text" id="fname" required/>
+        </p>
+        <p>
+            <label for="femail">E-mail:*</label>
+            <input name="email" type="text" id="femail" required/>
+        </p>
+        <p>
+            <label for="fpass">Password:*</label>
+            <input name="password" type="text" id="fpass" required/>
+        <p>
+    </ul>
+    <h2>Payment information</h2>
+    <p>
+    <ul style="list-style-type: none">
+        <label for="cardType">Card type:</label>
+        <select name="cardType" id="cardType">
+            <option value="visa">visa</option>
+            <option value="mastercard">mastercard</option>
+        </select>
+        </p>
+        <p>
+            <label for="fcardnumber">Card number:*</label>
+            <input name="cardNumber" type="text" id="fcardnumber" required/>
+        </p>
+        <p>
+            <label for="fexp">Expiration date:*</label>
+            <input name="expDate" type="text" id="fexp" value="dd/mm/yy, --:--" required/>
+        </p>
+    </ul>
+    <hr>
+    <label for="chkBox">Agree with terms and conditions</label>
+    <input name="chkBox" type="checkbox" id="chkBox" required/>
+    <br>
+    <p>
+        <input value="Validate the payment" type="submit"/>
+    </p>
+</form>
