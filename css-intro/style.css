@@ -1,3 +1,4 @@
+/*CSS 1 dalis*/
 li {
     color: blue;
 }
@@ -7,10 +8,60 @@ main>ul>li:nth-child(2){
     height: 100px;
 }
 
-main>ul>li:nth-child(3) li:nth-child(3), main>ul>li:nth-child(1) li:nth-child(2){
+main>ul>li:nth-child(3) li:nth-child(3),
+main>ul>li:nth-child(1) li:nth-child(2){
    background: red;
 }
 
 li li:nth-of-type(2n+1){
     font-weight: bold;
+}
+
+/*CSS 2 dalis*/
+div {
+    background: yellow;
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    background: burlywood;
+}
+.container>*{
+    margin: 20px;
+}
+.container > aside{
+    width: 30%;
+    background: darkcyan;
+    text-align: center;
+}
+
+.container > main {
+    width: 40%;
+    background: chartreuse;
+}
+
+aside.left{
+    float: left;
+}
+
+aside.right{
+    float: right;
+}
+.photo>* {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+img {
+    height: 150px;
+    width: 200px;
+    padding: 5px;
+}
+
+.task8{
+    background: blue;
+    padding: 20px;
+    margin: 30px;
 }
