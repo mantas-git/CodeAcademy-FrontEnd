@@ -1,0 +1,64 @@
+.sachmatai > div {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    padding: 10px;
+    background: blue;
+}
+
+div div:nth-child(2n+1){
+    background: gray;
+}
+
+div div:nth-child(4n+2){
+    background: cyan;
+}
+
+div div:nth-child(4n+4){
+    background: green;
+}
+
+div div:nth-child(2n+16){
+    background: pink;
+}
+
+div.sachmatai div:nth-of-type(5n+1){
+    position: static;
+}
+
+div.sachmatai div:nth-of-type(5n+2){
+    left: 110px;
+}
+
+div.sachmatai div:nth-of-type(5n+3){
+    left: 212.5px;
+}
+
+div.sachmatai div:nth-of-type(5n+4){
+    left: 315px;
+}
+
+div.sachmatai div:nth-of-type(5n+5){
+    left: 417.5px;
+}
+
+div.sachmatai div:nth-child(-n+5){
+    top: 2.5px;
+}
+
+div.sachmatai div:nth-child(6) ~ div{
+    top: 102.5px;
+}
+
+div.sachmatai div:nth-child(11) ~ div{
+    top: 202.5px;
+}
+
+div.sachmatai div:nth-child(16) ~ div{
+    top: 302.5px;
+}
+
+div.sachmatai div:nth-child(21) ~ div{
+    top: 402.5px;
+}
