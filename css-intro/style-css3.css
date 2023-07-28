@@ -16,7 +16,7 @@
     width: 535px;
 }
 
-div div:nth-child(4n+2){
+div div:nth-of-type(4n+2){
     background: cyan;
 }
 

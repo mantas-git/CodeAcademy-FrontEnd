@@ -1,0 +1,29 @@
+body {
+    margin: 3px;
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    grid-template-rows: 100px auto 30px;
+    grid-gap: 3px;
+    grid-template-areas:
+        "h h h"
+        "a_l m a_r"
+        "f f f";
+}
+body>header {
+    grid-area: h;
+}
+body>aside.left {
+    grid-area: a_l;
+}
+
+body>aside.right {
+    grid-area: a_r;
+}
+
+body>main {
+    grid-area: m;
+}
+
+body>footer {
+    grid-area: f;
+}

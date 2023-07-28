@@ -1,0 +1,24 @@
+body {
+    height: 100%;
+    background: black;
+}
+
+header {
+    background: #e7ecff;
+}
+
+header>div {
+    background-color: #e7ecff;
+}
+
+aside {
+    background: #e7ecff;
+}
+
+main {
+    background: #e7ecff;
+}
+
+footer {
+    background: #e7ecff;
+}

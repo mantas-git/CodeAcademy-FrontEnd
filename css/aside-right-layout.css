@@ -1,0 +1,17 @@
+aside.right {
+    display: grid;
+    grid-template-rows: 250px;
+    grid-template-areas:
+        "cal"
+        "ads";
+    grid-gap: 3px;
+}
+
+.calendar {
+    grid-area: cal;
+    border: 2px solid yellow;
+}
+
+.ads {
+    grid-area: ads;
+}

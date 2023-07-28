@@ -1,0 +1,14 @@
+aside.left {
+
+}
+
+aside.left span {
+    display: block;
+    height: 50px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-top: 3px;
+    text-align: center;
+    vertical-align: central;
+    font-weight: bold;
+}

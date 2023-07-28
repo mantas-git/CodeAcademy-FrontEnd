@@ -1,0 +1,17 @@
+div.pictures {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+.pictures img {
+    display: block;
+}
+
+.pictures > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
