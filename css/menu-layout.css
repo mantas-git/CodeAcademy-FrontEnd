@@ -13,6 +13,11 @@ header > div {
 
 header > div > img {
     height: 100px;
+    transition: all  .7s ease-in-out
+}
+
+header > div > img:hover {
+    transform: rotate(360deg);
 }
 
 header > nav > ul {
