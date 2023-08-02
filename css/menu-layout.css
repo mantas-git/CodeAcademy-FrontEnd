@@ -1,5 +1,6 @@
 body > header {
     display: grid;
+    position: relative;
     grid-template-columns: 2fr 10fr;
     grid-gap: 3px;
 }
@@ -14,17 +15,27 @@ header > div > img {
     height: 100px;
 }
 
+header > nav > ul {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
 li {
     display: inline;
     font-size: 2em;
     border: 2px solid green;
+    bottom: 0px;
 }
 
 header > input {
+    position: absolute;
     color: darkgray;
-    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    right: 0px;
     height: 25px;
-    top: 78px;
-    right: 3px;
     width: 20%;
 }

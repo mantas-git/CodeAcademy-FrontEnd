@@ -1,5 +1,6 @@
 div.pictures {
     display: grid;
+    margin-top: 10px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-gap: 10px;
@@ -7,6 +8,12 @@ div.pictures {
 
 .pictures img {
     display: block;
+    transition: transform .2s;
+}
+
+.pictures img:hover {
+    transform: scale(1.2);
+    box-shadow: 2px 2px 5px grey, -2px -2px 5px grey;
 }
 
 .pictures > div {

@@ -63,3 +63,9 @@ let user = {
 console.log(user);
 console.log(user.name);
 console.log(user.displayGreeting());
+
+// užduotis
+let make = 'FORD';
+let model = 'Focus';
+const introduction = `Automobilis yra ${make}, o modelis ${model}`;
+console.log(introduction);
