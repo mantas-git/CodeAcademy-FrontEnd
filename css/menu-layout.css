@@ -13,11 +13,12 @@ header > div {
 
 header > div > img {
     height: 100px;
+    position: absolute;
     transition: all  .7s ease-in-out
 }
 
 header > div > img:hover {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(0.5);
 }
 
 header > nav > ul {
@@ -28,10 +29,17 @@ header > nav > ul {
 }
 
 li {
+
     display: inline;
     font-size: 2em;
-    border: 2px solid green;
+    /*border: 2px solid black;*/
     bottom: 0px;
+    padding: 10px 50px 0px 50px;
+}
+
+li > a {
+    /*font-family: gill sans, sans-serif;*/
+    text-decoration: none;
 }
 
 header > input {
@@ -40,7 +48,6 @@ header > input {
     bottom: 0px;
     right: 0px;
     margin-bottom: 0px;
-    right: 0px;
     height: 25px;
     width: 20%;
 }

@@ -8,26 +8,20 @@
     <link rel="stylesheet" href="../css/menu-layout.css">
     <link rel="stylesheet" href="../css/aside-right-layout.css">
     <link rel="stylesheet" href="../css/aside-left-layout.css">
+
+    <script src="../js/menu.js" defer></script>
 </head>
-<!--Tai mano komentaras-->
 <body>
 <header>
     <div><img src="../img/logo.png" alt="LOGO" sizes="auto"></div>
-    <nav>
-        <ul>
-            <li><a href="/index.html">Pagrindinis</a></li>
-            <li><a href="/pictures.html">Nuotraukos</a></li>
-            <li><a href="/about.html">Apie mus</a></li>
-            <li><a href="/contacts.html">Kontaktai</a></li>
-        </ul>
-    </nav>
+    <nav class="menu"></nav>
     <input name="search" type="text" id="search" value="paieška"/>
 </header>
 
 <aside class="left">
-    <span>Pasirinkimas 1</span>
-    <span>Pasirinkimas 2</span>
-    <span>Pasirinkimas 3</span>
+    <span><a href="../task-with-math.html">Užduotis su veiksmais</a></span>
+    <span><a href="../calc.html">Skaičiuotuvas</a></span>
+    <span><a href="../age_validation.html">Amžiaus patikra</a></span>
     <span>Pasirinkimas 4</span>
 </aside>
 
@@ -37,7 +31,52 @@
 </aside>
 
 <main>
-    <p>Kontaktai</p>
+    <form>
+        <h1>
+            <p><b>Payment form</b></p>
+        </h1>
+        <p>Required fields are followed by *</p>
+        <h2><b>Contact information</b></h2>
+        <ul style="list-style-type: none">
+            <p>
+                <label for="fname">Name:*</label>
+                <input name="name" type="text" id="fname" required/>
+            </p>
+            <p>
+                <label for="femail">E-mail:*</label>
+                <input name="email" type="text" id="femail" required/>
+            </p>
+            <p>
+                <label for="fpass">Password:*</label>
+                <input name="password" type="text" id="fpass" required/>
+            <p>
+        </ul>
+        <h2>Payment information</h2>
+        <p>
+        <ul style="list-style-type: none">
+            <label for="cardType">Card type:</label>
+            <select name="cardType" id="cardType">
+                <option value="visa">visa</option>
+                <option value="mastercard">mastercard</option>
+            </select>
+            </p>
+            <p>
+                <label for="fcardnumber">Card number:*</label>
+                <input name="cardNumber" type="text" id="fcardnumber" required/>
+            </p>
+            <p>
+                <label for="fexp">Expiration date:*</label>
+                <input name="expDate" type="text" id="fexp" value="dd/mm/yy, --:--" required/>
+            </p>
+        </ul>
+        <hr>
+        <label for="chkBox">Agree with terms and conditions</label>
+        <input name="chkBox" type="checkbox" id="chkBox" required/>
+        <br>
+        <p>
+            <input value="Validate the payment" type="submit"/>
+        </p>
+    </form>
 </main>
 
 <footer>

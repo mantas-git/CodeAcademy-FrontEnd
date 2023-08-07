@@ -1,4 +1,5 @@
 body {
+    font-family: gill sans, sans-serif;
     margin: 3px;
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
@@ -22,6 +23,7 @@ body>aside.right {
 
 body>main {
     grid-area: m;
+    padding: 10px;
 }
 
 body>footer {

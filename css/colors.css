@@ -1,24 +1,29 @@
+:root {
+    --backColor: #e7ecff;
+    --backColor2: #f5f7fd;
+}
+
 body {
     height: 100%;
     background: black;
 }
 
 header {
-    background: #e7ecff;
-}
-
-header>div {
-    background-color: #e7ecff;
+    background: var(--backColor);
+    background-image: linear-gradient(to top, var(--backColor), var(--backColor2));
 }
 
 aside {
-    background: #e7ecff;
+    background: var(--backColor);
+    background-image: linear-gradient(to bottom left, var(--backColor), var(--backColor2));
 }
 
 main {
-    background: #e7ecff;
+    background: var(--backColor);
+    background-image: linear-gradient(to bottom right, var(--backColor), var(--backColor2));
 }
 
 footer {
-    background: #e7ecff;
+    background: var(--backColor);
+    background-image: linear-gradient(to top, var(--backColor), var(--backColor2));
 }
