@@ -39,20 +39,10 @@ for(let i = 0; i < newNavTags.length; i++) {
     }
 }
 
-// let searchField = document.getElementById('searchField');
-// let searchField = document.querySelector('#searchField');
-// document.querySelector('#searchField').addEventListener('keypress',function(e) {
-//         if (e.key === 'Enter') {
-//             console.log("Enter");
-//             alert('Atsakymas');
-//         }
-//     }
-// );
-
-let searchField = document.getElementById("searchField");
+let searchField = document.getElementById("search");
 searchField.addEventListener("keydown", function (e) {
         if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
-            console.log("Enter");
+            alert(searchField.value);
         }
     }
 )
