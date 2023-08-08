@@ -11,6 +11,7 @@ const leftAsideElementList = [
     {href:'../age_validation.html', title: 'Amžiaus patikra'},
 ]
 
+
 let navTags = document.querySelector('header > nav');
 let tempHTML = '<ul>';
 for(let i = 0; i < menuElemetList.length; i++) {
@@ -35,14 +36,14 @@ leftAsideTags.innerHTML = tempHTML;
 
 
 let newNavTags = document.getElementsByTagName('li');
-for(let i = 0; i < newNavTags.length; i++) {
-    let element = newNavTags[i];
-    element.addEventListener('click',() => setBackgroundColor(element));
-}
-
-function setBackgroundColor(element){
-    element.style.backgroundColor = `greenyellow`;
-}
+// for(let i = 0; i < newNavTags.length; i++) {
+//     let element = newNavTags[i];
+//     element.addEventListener('click',() => setBackgroundColor(element));
+// }
+//
+// function setBackgroundColor(element){
+//     element.style.backgroundColor = `greenyellow`;
+// }
 
 let url = window.location.pathname;
 let href = url.split("/").reverse()[0];

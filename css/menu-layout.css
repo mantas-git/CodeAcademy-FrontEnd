@@ -13,7 +13,7 @@ header > div {
 
 header > div > img {
     height: 100px;
-    position: absolute;
+    /*position: absolute;*/
     transition: all  .7s ease-in-out
 }
 

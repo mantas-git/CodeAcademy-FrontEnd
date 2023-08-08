@@ -38,10 +38,10 @@ for (let i = 0; i < newButtons.length; i++) {
 
 function calcAction() {
     let cLine = document.getElementById('calcLine');
-    if (this.id == 'bReset') {
+    if (this.id === 'bReset') {
         cLine.innerHTML = '';
-    } else if (this.id == 'bPlus' || this.id == 'bMinus' || this.id == 'bMultiply' || this.id == 'bDevide') {
-        if (lastSimbol(cLine.textContent)) {
+    } else if (this.id === 'bPlus' || this.id === 'bMinus' || this.id === 'bMultiply' || this.id === 'bDevide') {
+        if (lastSymbol(cLine.textContent)) {
             let text = cLine.innerHTML;
             console.log(text);
             text = text.slice(0, -1);
@@ -50,8 +50,8 @@ function calcAction() {
         } else {
             cLine.innerHTML += this.textContent;
         }
-    } else if (this.id == 'bCount') {
-        if (lastSimbol(cLine.textContent)) {
+    } else if (this.id === 'bCount') {
+        if (lastSymbol(cLine.textContent)) {
             cLine.textContent = 'ERROR'
         } else {
             calculation(cLine.textContent);
@@ -61,9 +61,9 @@ function calcAction() {
     }
 }
 
-function lastSimbol(text) {
+function lastSymbol(text) {
     let lastS = text.slice(-1);
-    return (lastS == '+' || lastS == '-' || lastS == '*' || lastS == '/');
+    return (lastS === '+' || lastS === '-' || lastS === '*' || lastS === '/');
 }
 
 function calculation(textLine) {
@@ -72,11 +72,11 @@ function calculation(textLine) {
     console.log(digits);
     let noDigits = textLine.replace(/[0-9]/g, '').split('');
     for (let i = 0; i < noDigits.length; i++) {
-        if (noDigits[i] == '*') {
+        if (noDigits[i] === '*') {
             digits[i + 1] = multiply(digits[i], digits[i + 1]);
             digits[i] = 'x';
         }
-        if (noDigits[i] == '/') {
+        if (noDigits[i] === '/') {
             digits[i + 1] = divide(digits[i], digits[i + 1]);
             digits[i] = 'x';
         }
@@ -86,19 +86,19 @@ function calculation(textLine) {
     removeX(digits);
 
     for (let i = 0; i < noDigits.length; i++) {
-        if (noDigits[i] == '*' || noDigits[i] == '/') {
+        if (noDigits[i] === '*' || noDigits[i] === '/') {
             noDigits.splice(i, 1);
             i--;
         }
     }
 
     for (let i = 0; i < noDigits.length; i++) {
-        if (noDigits[i] == '+') {
-            digits[i+1] = sum(parseInt(digits[i]), parseInt(digits[i + 1]));
+        if (noDigits[i] === '+') {
+            digits[i + 1] = sum(parseInt(digits[i]), parseInt(digits[i + 1]));
             digits[i] = 'x';
         }
-        if (noDigits[i] == '-') {
-            digits[i+1] = subtract(digits[i], digits[i + 1]);
+        if (noDigits[i] === '-') {
+            digits[i + 1] = subtract(digits[i], digits[i + 1]);
             digits[i] = 'x';
         }
         console.log(digits);
@@ -110,17 +110,16 @@ function calculation(textLine) {
 
     let cLine = document.getElementById('calcLine');
 
-    if(digits[0] != null){
+    if (digits[0] != null) {
         cLine.textContent = digits[0];
-    }
-    else {
+    } else {
         cLine.textContent = 'ERROR';
     }
 }
 
 function removeX(digits) {
     for (let i = 0; i < digits.length; i++) {
-        if (digits[i] == 'x') {
+        if (digits[i] === 'x') {
             digits.splice(i, 1);
             i--;
         }
@@ -143,3 +142,49 @@ function multiply(a, b) {
 function divide(a, b) {
     return a / b;
 }
+
+dragElement(document.getElementById("calcDiv"));
+
+function dragElement(elmnt) {
+    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+    elmnt.onmousedown = dragMouseDown;
+
+    function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+
+let calcDiv = document.getElementById("calcDiv");
+calcDiv.addEventListener("keydown", function (e) {
+        if (e.code === "1") {  //checks whether the pressed key is "Enter"
+            alert('1');
+        }
+    }
+)

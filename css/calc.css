@@ -1,4 +1,5 @@
 #calcDiv {
+    position: absolute;
     background: darkcyan;
     border: 2px black solid;
     width: 240px;
