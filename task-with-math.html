@@ -3,20 +3,22 @@
     <title>Main-page</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/colors.css">
-    <link rel="stylesheet" href="../css/menu-layout.css">
-    <link rel="stylesheet" href="../css/aside-right-layout.css">
-    <link rel="stylesheet" href="../css/aside-left-layout.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/menu-layout.css">
+    <link rel="stylesheet" href="css/aside-right-layout.css">
+    <link rel="stylesheet" href="css/aside-left-layout.css">
 
-    <script src="../js/menu.js" defer></script>
-    <script src="../js/task-with-math.js" defer></script>
+    <script src="js/menu.js" defer></script>
+
+    <!--Atskiri-->
+    <script src="js/task-with-math.js" defer></script>
 </head>
-<!--Tai mano komentaras-->
 <body>
 <header>
-    <div><img class="logo" src="../img/logo.png" alt="LOGO" sizes="auto"></div>
+    <div><img class="logo" src="img/logo.png" alt="LOGO" sizes="auto"></div>
     <nav></nav>
+    <label for="search"></label>
     <input name="searchField" type="text" id="search" value="paieška"/>
 </header>
 
@@ -28,9 +30,15 @@
 </aside>
 
 <main>
-    <div><input type="number" id="inta" style="text-align:right"/></div>
+    <div>
+        <label for="inta"></label>
+        <input type="number" id="inta" style="text-align:right"/>
+    </div>
     <br>
-    <div><input type="number" id="intb" style="text-align:right"/></div>
+    <div>
+        <label for="intb"></label>
+        <input type="number" id="intb" style="text-align:right"/>
+    </div>
     <br>
     <button onclick="getSum()">+</button>
     <button onclick="getSubtract()">-</button>
