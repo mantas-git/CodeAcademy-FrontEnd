@@ -5,17 +5,17 @@ div.pictures {
     grid-gap: 10px;
 }
 
-.pictures img {
+div.pictures img {
     display: block;
     transition: transform .2s;
 }
 
-.pictures img:hover {
+div.pictures img:hover {
     transform: scale(1.2);
     box-shadow: 2px 2px 5px grey, -2px -2px 5px grey;
 }
 
-.pictures > div {
+div.pictures > div {
     display: flex;
     justify-content: center;
     align-items: center;

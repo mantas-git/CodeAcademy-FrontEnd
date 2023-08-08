@@ -4,7 +4,7 @@ aside.right {
     grid-template-areas:
         "cal"
         "ads";
-    grid-gap: 3px;
+    grid-gap: 15px;
 }
 
 .calendar {
@@ -14,4 +14,14 @@ aside.right {
 
 .ads {
     grid-area: ads;
+    display: block;
+    align-items: center;
+
+}
+
+.ads img {
+    border-radius: 10px;
+    margin: 5px;
+    /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);*/
+    box-shadow: 2px 2px 5px lightgray, -2px -2px 5px lightgray;
 }

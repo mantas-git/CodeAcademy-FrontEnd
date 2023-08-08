@@ -1,7 +1,7 @@
 body > header {
     display: grid;
-    position: relative;
-    grid-template-columns: 2fr 10fr;
+    position: sticky;
+    grid-template-columns: 1fr 11fr;
     grid-gap: 3px;
 }
 
@@ -11,43 +11,36 @@ header > div {
     align-items: center;
 }
 
-header > div > img {
-    height: 100px;
-    /*position: absolute;*/
-    transition: all  .7s ease-in-out
+header > div.logo img {
+    height: var(--topMenuHeight);
+    transition: all .7s ease-in-out
 }
 
-header > div > img:hover {
-    transform: rotate(360deg) scale(0.5);
+header > div.logo img:hover {
+    transform: scale(1.1);
 }
 
-header > nav > ul {
-    position: absolute;
-    bottom: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-}
-
-li {
-
+header li {
     display: inline;
-    font-size: 2em;
-    /*border: 2px solid black;*/
-    bottom: 0px;
-    padding: 10px 50px 0px 50px;
+    vertical-align: middle;
+    line-height: var(--topMenuHeight);
+    margin: 10px;
 }
 
-li > a {
-    /*font-family: gill sans, sans-serif;*/
+header li > a {
     text-decoration: none;
+    font-family: 'Brush Script MT', cursive;
+    /*font-style: italic;*/
+    color: #e7ecff;
+    font-size: 1.15em;
 }
 
 header > input {
     position: absolute;
     color: darkgray;
-    bottom: 0px;
-    right: 0px;
-    margin-bottom: 0px;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0;
     height: 25px;
     width: 20%;
 }

@@ -13,14 +13,12 @@
     <script src="js/menu.js" defer></script>
     <script src="js/calendar.js" defer></script>
 
-    <!--Atskiri-->
-    <link rel="stylesheet" href="css/calc.css">
-    <script src="js/calc.js" defer></script>
+    <script src="js/name-surname-form.js" defer></script>
 </head>
 <body>
 <header>
     <div class="logo"></div>
-    <nav></nav>
+    <nav class="menu"></nav>
     <label for="search"></label>
     <input name="searchField" type="text" id="search" value="paieška"/>
 </header>
@@ -33,7 +31,16 @@
 </aside>
 
 <main>
-    <div id="calcDiv"></div>
+    <form action="/kontaktai" method="post">
+        <label for="name">Vardas:</label>
+        <input name="name" type="text" id="name" required/>
+        <label for="surname">Pavardė:</label>
+        <input name="surname" type="text" id="surname" required/>
+        <input value="Patvirtinti" type="submit"/>
+    </form>
+    <br><hr>
+    <div id="enterdNameAndSurname" align="center"> </div>
+    <hr>
 </main>
 
 <footer>

@@ -1,14 +1,20 @@
+:root {
+    --topMenuHeight: 70px;
+}
+
 body {
+    height: 100%;
     font-family: gill sans, sans-serif;
-    margin: 3px;
+    margin: 5px;
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
-    grid-template-rows: 100px auto 30px;
+    grid-template-rows: var(--topMenuHeight) auto 30px;
     grid-gap: 3px;
     grid-template-areas:
         "h h h"
         "a_l m a_r"
         "f f f";
+    background-image: linear-gradient(to bottom left, #1d84d0, #0d51a9);
 }
 body>header {
     grid-area: h;

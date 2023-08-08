@@ -3,12 +3,13 @@ aside.left {
 }
 
 aside.left span {
-    display: block;
+    display: inline-flex;
     height: 50px;
+    width: 100%;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    margin-top: 3px;
-    text-align: center;
-    vertical-align: central;
+    margin-bottom: 3px;
+    padding-left: 10%;
     font-weight: bold;
+    align-items: center;
 }
