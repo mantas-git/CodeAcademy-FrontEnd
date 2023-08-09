@@ -29,9 +29,15 @@ header li {
 
 .upperMenuElement {
     position: relative;
+
+    /*font-style: italic;*/
+    /*color: #e7ecff;*/
+
+}
+
+.upperMenuElement a {
     text-decoration: none;
     font-family: 'Brush Script MT', cursive;
-    /*font-style: italic;*/
     color: #e7ecff;
     font-size: 1.15em;
 }
@@ -42,19 +48,37 @@ header li {
     width: 100%;
     transform: scaleX(0);
     height: 2px;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
     background-color: #e7ecff;
-    transform-origin: bottom right;
+    transform-origin: center;
     transition: transform 0.25s ease-out;
 }
 
 .upperMenuElement:hover::after {
     transform: scaleX(1);
-    transform-origin: bottom left;
+    transform-origin: center;
 }
 
-header > input {
+.activeMenuElement::after {
+    content: '';
+    width: 100%;
+    transform: scaleX(1);
+    height: 2px;
+    left: 0;
+}
+
+/*header > input {*/
+/*    position: absolute;*/
+/*    color: darkgray;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    margin-bottom: 0;*/
+/*    height: 25px;*/
+/*    width: 20%;*/
+/*}*/
+
+.searchZone {
     position: absolute;
     color: darkgray;
     bottom: 0;

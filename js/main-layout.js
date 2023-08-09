@@ -1,4 +1,4 @@
-const menuElemetList = [
+const menuElementList = [
     {href:'/index.html', title: 'Pagrindinis'},
     {href:'/pictures.html', title: 'Nuotraukos'},
     {href:'/about.html', title: 'Apie mus'},
@@ -12,27 +12,23 @@ const leftAsideElementList = [
     {href:'/name_surname_form.html', title: 'Forma su dviem laukais'}
 ]
 
-const bannerList = [
-    // <div><img src="https://picsum.photos/200/300?random1" alt=""></div>
-    {src:'https://picsum.photos/200/300?random', title: 'Užduotis su veiksmais'},
-    {href:'/calc.html', title: 'Skaičiuotuvas'},
-    {href:'/age_validation.html', title: 'Amžiaus patikra'},
-    {href:'/name_surname_form.html', title: 'Forma su dviem laukais'}
-]
-
 let logoTag = document.querySelector('div.logo');
 logoTag.innerHTML = `<a href="/" target="_self"><img src="img/logo.png" alt="LOGO" sizes="auto"></a>`;
 
 let navTags = document.querySelector('header > nav');
 let tempHTML = '<ul>';
-for(let i = 0; i < menuElemetList.length; i++) {
-    let href = menuElemetList[i].href;
-    let title = menuElemetList[i].title;
-    let menuElement = `<li><a href="${href}" class="upperMenuElement">${title}</a></li>`;
+for(let i = 0; i < menuElementList.length; i++) {
+    let href = menuElementList[i].href;
+    let title = menuElementList[i].title;
+    let menuElement = `<li class="upperMenuElement"><a href="${href}">${title}</a></li>`;
     tempHTML += menuElement;
 }
 tempHTML += '</ul>';
 navTags.innerHTML = tempHTML;
+
+let searchTag = document.querySelector('div.searchZone');
+searchTag.innerHTML = `<input name="searchField" type="text" id="search" value="paieška"/>
+        <label for="search"><img src="img/search-icon.png" alt="" width="25px"></label>`;
 
 let leftAsideTags = document.querySelector('aside.left');
 tempHTML = '';
@@ -73,8 +69,7 @@ for(let i = 0; i < newNavTags.length; i++) {
     console.log(child[0].href);
     let childHref = child[0].href.split("/").reverse()[0];
     if (childHref === href) {
-        element.style.color = '#e7ecff';
-        element.style.textDecoration = 'underline';
+        element.classList.add('activeMenuElement');
     }
 }
 
