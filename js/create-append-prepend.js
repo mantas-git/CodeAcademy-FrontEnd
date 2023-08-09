@@ -29,12 +29,8 @@ function badValue(text) {
 }
 
 function hideFormDivs() {
-    let removableDivs = document.getElementsByClassName('goodNumber');
-    if(removableDivs.length > 0) {
-        removableDivs[0].remove();
-    }
-    removableDivs = document.getElementsByClassName('badValue');
-    if(removableDivs.length > 0) {
-        removableDivs[0].remove();
+    let removableDiv = document.querySelector('form > div');
+    if(removableDiv != null){
+        removableDiv.remove();
     }
 }
