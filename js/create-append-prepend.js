@@ -4,11 +4,13 @@ let blurMain = document.querySelector('main > form');
 blurForm.addEventListener('blur', blurAction);
 function blurAction(t) {
     hideFormDivs();
-    if(this.value > 0 && this.value < 99){
-        goodValue();
-    }
-    else {
-        badValue(this.value);
+    let enteredText = this.value;
+    if (enteredText.length > 0) {
+        if (enteredText >= 0 && enteredText <= 99) {
+            goodValue();
+        } else {
+            badValue(enteredText);
+        }
     }
 }
 
@@ -28,12 +30,10 @@ function badValue(text) {
 
 function hideFormDivs() {
     let removableDivs = document.getElementsByClassName('goodNumber');
-    console.log(removableDivs);
     if(removableDivs.length > 0) {
         removableDivs[0].remove();
     }
     removableDivs = document.getElementsByClassName('badValue');
-    console.log(removableDivs);
     if(removableDivs.length > 0) {
         removableDivs[0].remove();
     }
