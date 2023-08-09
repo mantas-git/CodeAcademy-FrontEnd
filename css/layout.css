@@ -29,7 +29,7 @@ body>aside.right {
 
 body>main {
     grid-area: m;
-    padding: 10px;
+    /*margin: 10px;*/
 }
 
 body>footer {

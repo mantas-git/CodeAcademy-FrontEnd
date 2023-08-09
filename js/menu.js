@@ -28,7 +28,7 @@ let tempHTML = '<ul>';
 for(let i = 0; i < menuElemetList.length; i++) {
     let href = menuElemetList[i].href;
     let title = menuElemetList[i].title;
-    let menuElement = `<li><a href="${href}">${title}</a></li>`;
+    let menuElement = `<li><a href="${href}" class="upperMenuElement">${title}</a></li>`;
     tempHTML += menuElement;
 }
 tempHTML += '</ul>';
