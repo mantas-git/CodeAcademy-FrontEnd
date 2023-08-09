@@ -9,7 +9,9 @@ const leftAsideElementList = [
     {href:'/task-with-math.html', title: 'Užduotis su veiksmais'},
     {href:'/calc.html', title: 'Skaičiuotuvas'},
     {href:'/age_validation.html', title: 'Amžiaus patikra'},
-    {href:'/name_surname_form.html', title: 'Forma su dviem laukais'}
+    {href:'/name_surname_form.html', title: 'Forma su dviem laukais'},
+    {href:'/create-append-prepend.html', title: 'create append prepend'},
+
 ]
 
 let logoTag = document.querySelector('div.logo');
@@ -27,8 +29,10 @@ tempHTML += '</ul>';
 navTags.innerHTML = tempHTML;
 
 let searchTag = document.querySelector('div.searchZone');
-searchTag.innerHTML = `<input name="searchField" type="text" id="search" value="paieška"/>
-        <label for="search"><img src="img/search-icon.png" alt="" width="25px"></label>`;
+searchTag.innerHTML = `
+<label for="search"><img src="img/search-icon.png" alt="" width="25px"></label>
+<input name="searchField" type="text" id="search" value=""/>
+        `;
 
 let leftAsideTags = document.querySelector('aside.left');
 tempHTML = '';
