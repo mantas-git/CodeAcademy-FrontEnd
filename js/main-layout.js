@@ -35,15 +35,33 @@ searchTag.innerHTML = `
 <input name="searchField" type="text" id="search" value=""/>
         `;
 
-let leftAsideTags = document.querySelector('aside.left');
-tempHTML = '';
-for(let i = 0; i < leftAsideElementList.length; i++) {
-    let href = leftAsideElementList[i].href;
-    let title = leftAsideElementList[i].title;
-    let menuElement = `<span><a href="${href}">${title}</a></span><br>`;
-    tempHTML += menuElement;
+function createLeftAside() {
+    const leftAsideTag = document.querySelector('aside.left');
+
+    const leftAsideDiv = document.createElement('div');
+    leftAsideDiv.className = 'menu';
+
+    const leftAsideDivTitle = document.createElement('div');
+    leftAsideDivTitle.className = 'title';
+    leftAsideDivTitle.textContent = 'Užduotys';
+
+    const leftAsideUl = document.createElement('ul');
+    leftAsideUl.className = 'nav';
+
+    for (let i = 0; i < leftAsideElementList.length; i++) {
+        let newLi = document.createElement('li');
+        let newA = document.createElement('a');
+        newA.href = leftAsideElementList[i].href;
+        newA.textContent = leftAsideElementList[i].title;
+        newLi.append(newA);
+        leftAsideUl.append(newLi);
+    }
+    leftAsideDiv.append(leftAsideDivTitle);
+    leftAsideDiv.append(leftAsideUl);
+    leftAsideTag.append(leftAsideDiv);
 }
-leftAsideTags.innerHTML = tempHTML;
+
+createLeftAside();
 
 let bannerTags = document.querySelector('div.ads');
 tempHTML = '';
@@ -71,7 +89,6 @@ let href = url.split("/").reverse()[0];
 for(let i = 0; i < newNavTags.length; i++) {
     let element = newNavTags[i];
     let child = element.children;
-    console.log(child[0].href);
     let childHref = child[0].href.split("/").reverse()[0];
     if (childHref === href) {
         element.classList.add('activeMenuElement');
