@@ -3,12 +3,12 @@ let masyvas = [];
 const main = document.querySelector('main');
 
 const input = document.createElement('input');
-main.append(input);
 
-addButton('Pop');
-addButton('Push');
 addButton('Shift');
 addButton('Unshift');
+main.append(input);
+addButton('Push');
+addButton('Pop');
 
 const output = document.createElement('p');
 output.textContent = '';
@@ -23,23 +23,31 @@ function addButton(name) {
 }
 
 function arrayPop() {
-    masyvas = output.innerText.split(',');
-    masyvas.pop();
-    output.innerHTML = masyvas.join(',');
+    getOutputValue().pop();
+    updateInputOutput();
 }
 
 function arrayPush() {
     masyvas.push(input.value);
-    output.innerHTML = masyvas.join(',');
+    updateInputOutput();
 }
 
 function arrayShift() {
-    masyvas = output.innerText.split(',');
-    masyvas.shift();
-    output.innerHTML = masyvas.join(',');
+    getOutputValue().shift();
+    updateInputOutput();
 }
 
 function arrayUnshift() {
     masyvas.unshift(input.value);
+    updateInputOutput();
+}
+
+function getOutputValue() {
+    masyvas = output.innerText.split(',');
+    return masyvas;
+}
+
+function updateInputOutput() {
+    input.value = '';
     output.innerHTML = masyvas.join(',');
 }
