@@ -43,9 +43,7 @@ function calcAction() {
     } else if (this.id === 'bPlus' || this.id === 'bMinus' || this.id === 'bMultiply' || this.id === 'bDevide') {
         if (lastSymbol(cLine.textContent)) {
             let text = cLine.innerHTML;
-            console.log(text);
             text = text.slice(0, -1);
-            console.log(text);
             cLine.textContent = text + this.textContent;
         } else {
             cLine.innerHTML += this.textContent;

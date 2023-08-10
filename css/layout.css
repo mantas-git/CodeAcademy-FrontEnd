@@ -14,7 +14,7 @@ body {
         "h h h"
         "a_l m a_r"
         "f f f";
-    background-image: linear-gradient(to bottom left, #1d84d0, #0d51a9);
+    background-image: linear-gradient(to bottom right, #1d84d0, #0d51a9, #106aab);
 }
 body>header {
     grid-area: h;
@@ -34,4 +34,8 @@ body>main {
 
 body>footer {
     grid-area: f;
+}
+
+main button {
+    min-width: 30px;
 }

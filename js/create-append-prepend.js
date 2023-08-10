@@ -2,6 +2,7 @@ let blurForm = document.getElementById('number');
 let blurMain = document.querySelector('main > form');
 
 blurForm.addEventListener('blur', blurAction);
+
 function blurAction(t) {
     hideFormDivs();
     let enteredText = this.value;

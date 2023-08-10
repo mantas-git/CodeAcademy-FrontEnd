@@ -10,7 +10,8 @@ const leftAsideElementList = [
     {href:'/calc.html', title: 'Skaičiuotuvas'},
     {href:'/age_validation.html', title: 'Amžiaus patikra'},
     {href:'/name_surname_form.html', title: 'Forma su dviem laukais'},
-    {href:'/create-append-prepend.html', title: 'create append prepend'},
+    {href:'/create-append-prepend.html', title: 'Forma su "blur" funkcija'},
+    {href:'/pop_push_shift_unshift.html', title: 'Pop Push Shift Unshift'},
 
 ]
 
