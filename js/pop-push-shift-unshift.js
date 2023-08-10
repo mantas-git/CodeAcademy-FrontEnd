@@ -5,29 +5,22 @@ const main = document.querySelector('main');
 const input = document.createElement('input');
 main.append(input);
 
-const buttonPop = document.createElement('button');
-buttonPop.textContent = 'Pop';
-buttonPop.addEventListener('click', arrayPop);
-main.append(buttonPop);
-
-const buttonPush = document.createElement('button');
-buttonPush.textContent = 'Push';
-buttonPush.addEventListener('click', arrayPush);
-main.append(buttonPush);
-
-const buttonShift = document.createElement('button');
-buttonShift.textContent = 'Shift';
-buttonShift.addEventListener('click', arrayShift);
-main.append(buttonShift);
-
-const buttonUnshift = document.createElement('button');
-buttonUnshift.textContent = 'Unshift';
-buttonUnshift.addEventListener('click', arrayUnshift);
-main.append(buttonUnshift);
+addButton('Pop');
+addButton('Push');
+addButton('Shift');
+addButton('Unshift');
 
 const output = document.createElement('p');
 output.textContent = '';
 main.append(output);
+
+function addButton(name) {
+    const newButton = document.createElement('button');
+    newButton.textContent = name;
+    let functionName = "array" + name;
+    newButton.addEventListener('click', window[functionName]);
+    main.append(newButton);
+}
 
 function arrayPop() {
     masyvas = output.innerText.split(',');
