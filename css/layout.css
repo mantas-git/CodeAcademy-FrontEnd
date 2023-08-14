@@ -7,7 +7,7 @@ body {
     font-family: gill sans, sans-serif;
     margin: 5px;
     display: grid;
-    grid-template-columns: 2fr 8fr 2fr;
+    grid-template-columns: 1fr 9fr 2fr;
     grid-template-rows: var(--topMenuHeight) auto 30px;
     grid-gap: 3px;
     grid-template-areas:

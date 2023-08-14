@@ -1,0 +1,27 @@
+div.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+div.gallery img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    transition: transform .2s;
+}
+
+div.gallery img:hover {
+    transform: scale(1.2);
+    box-shadow: 2px 2px 5px grey, -2px -2px 5px grey;
+}
+
+div.gallery > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}

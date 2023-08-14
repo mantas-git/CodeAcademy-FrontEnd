@@ -12,6 +12,7 @@ const leftAsideElementList = [
     {href:'/name_surname_form.html', title: 'Forma su dviem laukais'},
     {href:'/create-append-prepend.html', title: 'Forma su "blur" funkcija'},
     {href:'/pop_push_shift_unshift.html', title: 'Pop Push Shift Unshift'},
+    {href:'/gallery.html', title: 'Galerija (JSON)'},
 
 ]
 
@@ -102,3 +103,31 @@ searchField.addEventListener("keydown", function (e) {
         }
     }
 )
+
+// const arr = ['I', 'study', 'JavaScript', 'right', 'now'];
+// arr.splice(0,3, "Lets", "dance");
+// console.log(arr.join(' '));
+
+// function sumuotiIr(a, b, callback) {
+//     let sum = a + b;
+//     callback(sum);
+// }
+// sumuotiIr(5,6, (skaicius) => { console.log('Skaiciu suma: ' + skaicius)});
+
+// let accords = ['D', 'G', 'C', 'C7', 'F'];
+//
+// function addSeven(accord, callback) {
+//     if(!accord.endsWith('7')) {
+//         accord += '7';
+//     }
+//     callback(accord);
+// }
+//
+// function readAccords (){
+//     console.log(accords);
+//     for (let i = 0; i < accords.length; i++) {
+//         addSeven(accords[i], (a) => {accords[i] = a}  )
+//     }
+//     console.log(accords);
+// }
+// readAccords();
