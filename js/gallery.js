@@ -29,6 +29,7 @@ function run() {
                 loaderDiv.textContent = 'Loading...'
                 let newImg = document.createElement('img');
                 newImg.src = download_url;
+                newImg.alt = download_url;
                 newImg.onload = function (){
                     loaderDiv.remove();
                 }

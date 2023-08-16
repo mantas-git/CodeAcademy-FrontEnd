@@ -6,7 +6,7 @@ const menuElementList = [
 ];
 
 const leftAsideElementList = [
-    {href:'/task-with-math.html', title: 'Užduotis su veiksmais'},
+    {href:'/task_with_math.html', title: 'Užduotis su veiksmais'},
     {href:'/calc.html', title: 'Skaičiuotuvas'},
     {href:'/age_validation.html', title: 'Amžiaus patikra'},
     {href:'/name_surname_form.html', title: 'Forma su dviem laukais'},
