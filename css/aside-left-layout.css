@@ -9,7 +9,7 @@ aside.left {
     z-index: 100;
     -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
     box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
-    left: -210px;
+    left: -205px;
     top: 70px;
     transition: all 0.5s;
     -webkit-transition: all 0.3s;
@@ -28,7 +28,7 @@ aside.left .title {
     /*transform: rotate(90deg);*/
     text-orientation: upright;
     writing-mode: vertical-rl;
-    right: 15px;
+    right: 10px;
     font-weight: 800;
     font-size: 30px;
 }
@@ -41,6 +41,7 @@ aside.left .nav {
     font-weight: 100;
 }
 aside.left .nav li {
+    max-width: 210px;
     padding-bottom: 30px;
     list-style-type: none;
 }

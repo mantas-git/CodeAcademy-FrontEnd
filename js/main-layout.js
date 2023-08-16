@@ -13,6 +13,7 @@ const leftAsideElementList = [
     {href:'/create-append-prepend.html', title: 'Forma su "blur" funkcija'},
     {href:'/pop_push_shift_unshift.html', title: 'Pop Push Shift Unshift'},
     {href:'/gallery.html', title: 'Galerija (JSON)'},
+    {href:'/local_storage.html', title: 'Duomenų saugojimas vidinėje atmintyje'},
 
 ]
 
